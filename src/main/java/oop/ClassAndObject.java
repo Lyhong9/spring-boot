@@ -23,8 +23,13 @@ class Test{
 public class ClassAndObject {
     public static void main(String[] args) {
         // Create an object from a class
-        Test obj = new Test();
-        obj.Input(); // access class member
-        obj.Output(); // access class member
+        Test obj1 = new Test();
+        Test obj2 = new Test();
+
+        obj1.Input(); // access class member
+        obj1.Output(); // access class member
+
+        obj2.Input();
+        obj2.Output();
     }
 }
