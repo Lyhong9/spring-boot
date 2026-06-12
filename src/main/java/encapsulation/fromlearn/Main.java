@@ -1,4 +1,4 @@
-package encapsulation;
+package encapsulation.fromlearn;
 
 public class Main {
     public static void main(String[] args) {

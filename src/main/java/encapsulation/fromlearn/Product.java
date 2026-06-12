@@ -1,4 +1,4 @@
-package encapsulation;
+package encapsulation.fromlearn;
 
 public class Product {
     private int id;
