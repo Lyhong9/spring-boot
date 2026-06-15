@@ -4,7 +4,7 @@ public class B extends A {
     protected int z;
 
     public int sum(){
-        return x + y + z;
+        return super.x + super.y + z;
     }
 
     public int getZ(){
