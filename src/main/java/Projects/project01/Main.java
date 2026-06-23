@@ -137,7 +137,27 @@ public class Main {
                     }
                     System.out.println(" ");
                     break;
+                case 6:
+                    System.out.println("========== Delete Staff ==========");
+                    System.out.print("Enter Staff ID: ");isSearchID = input.nextInt();
+                    input.nextLine();
+                    isFound = 0;
+                    for (i = 0; i < n; i++) {
+                        if (staffs[i].getId() == isSearchID) {
+                            for ( int j = i; j < n; j++) {
+                                staffs[j] =  staffs[j + 1];
+                            }
+                            n--;
+                            System.out.println("<<< Data Deleted Successfully >>>");
+                            break;
+                        }
+                    }
+                    if (isFound == 0) {
+                        System.out.println("========== Staff Not Found ==========");
+                    }
+                    break;
             }
         }while (option != 7);
     }
 }
+
