@@ -7,7 +7,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Staff[] staffs = new Staff[500];
         int n = 0, i, option;
-        double isSearch;
+        int isSearch;
         do {
             System.out.println("========== MENU ==========");
             System.out.println("1. Add Staff");
@@ -23,13 +23,15 @@ public class Main {
                     n++;
                     break;
                 case 2:
+                    Staff.displayHeader();
                     for (i = 0; i < n; i++) {
                         staffs[i].display();
                     }
+                    System.out.println(" ");
                     break;
                 case 3:
                     System.out.println("========== Search Staff ==========");
-                    System.out.print("Enter Staff ID: ");isSearch = input.nextDouble();
+                    System.out.print("Enter Staff ID: ");isSearch = input.nextInt();
                     int isFound = 0;
                     for (i = 0; i < n; i++) {
                         if (staffs[i].getId() == isSearch) {
@@ -42,6 +44,7 @@ public class Main {
                     if (isFound == 0) {
                         System.out.println("========== Staff Not Found ==========");
                     }
+                    System.out.println(" ");
                     break;
             }
         }while (option != 4);

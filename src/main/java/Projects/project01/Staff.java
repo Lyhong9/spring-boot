@@ -100,16 +100,16 @@ public class Staff {
         System.out.println("=====================================");
     }
 
-    public void display() {
+    // Call this ONCE before printing your loop of data to act as the Excel column headers
+    public static void displayHeader() {
+        System.out.printf("%-8s %-15s %-15s %-10s %-25s %-15s %-15s %-12s\n",
+                "ID", "First Name", "Last Name", "Gender", "Email", "Address", "Phone", "Salary");
+        System.out.println("------------------------------------------------------------------------------------------------------------------------");
+    }
 
-        System.out.printf("%-12s: %d\n", "ID", id);
-        System.out.printf("%-12s: %s\n", "First Name", firstName);
-        System.out.printf("%-12s: %s\n", "Last Name", lastName);
-        System.out.printf("%-12s: %s\n", "Gender", gender);
-        System.out.printf("%-12s: %s\n", "Email", email);
-        System.out.printf("%-12s: %s\n", "Address", address);
-        System.out.printf("%-12s: %s\n", "Phone", phone);
-        System.out.printf("%-12s: $%.2f\n", "Salary", salary);
-        System.out.println("=====================================");
+    // Updated display method for the individual rows
+    public void display() {
+        System.out.printf("%-8d %-15s %-15s %-10s %-25s %-15s %-15s $%-11.2f\n",
+                id, firstName, lastName, gender, email, address, phone, salary);
     }
 }
