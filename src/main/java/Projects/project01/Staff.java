@@ -4,11 +4,23 @@ import java.util.Scanner;
 
 public class Staff {
     private long id;
-    private String firstName, lastName, gender, email, address, phone;
+    private String firstName,
+            lastName,
+            gender,
+            email,
+            address,
+            phone;
     private double salary;
 
     Staff() {}
-    Staff(long id, String firstName, String lastName, String gender, String email, String address, String phone, double salary) {
+    Staff(long id,
+          String firstName,
+          String lastName,
+          String gender,
+          String email,
+          String address,
+          String phone,
+          double salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
