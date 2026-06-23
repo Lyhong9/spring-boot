@@ -10,6 +10,12 @@ public class Main {
         double isSearchID;
         int isFound;
         String isSearchPhone;
+        // init data
+        for(i = 0 ; i < 6 ; i++){
+            staffs[i] = new Staff(i+1,"First"+i, "Last"+i, "MALE", "099"+i, "user"+i+"@mail.com",  "096", 9999+i);
+            n++;
+        }
+// end init data
         do {
             System.out.println("========== MENU ==========");
             System.out.println("1. Add Staff");
@@ -18,9 +24,10 @@ public class Main {
             System.out.println("4. Search Staff by Phone");
             System.out.println("5. Update Staff");
             System.out.println("6. Delete Staff");
-            System.out.println("7. Exit Program");
+            System.out.println("7. Sort Staff Salary DESC");
+            System.out.println("8. Exit Program");
             System.out.println("==========================");
-            System.out.print("Input option (1-7): ");
+            System.out.print("Input option (1-8): ");
             option = input.nextInt();
             input.nextLine();
             switch (option ) {
@@ -156,8 +163,20 @@ public class Main {
                         System.out.println("========== Staff Not Found ==========");
                     }
                     break;
+                case 7:
+                    Staff staffTmp = new Staff();
+                    for(i = 0 ; i < n ; i++){
+                        for(int j = i+1; j < n ; j++ ){
+                            // sort salary desc
+                            if( staffs[i].getSalary() < staffs[j].getSalary()){
+                                staffTmp = staffs[i];
+                                staffs[i] = staffs[j];
+                                staffs[j] = staffTmp;
+                            }
+                        }
+                    }
             }
-        }while (option != 7);
+        }while (option != 8);
     }
 }
 
