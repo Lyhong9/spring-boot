@@ -72,4 +72,12 @@ public class Brand {
     public void setFromCountry(String fromCountry) {
         this.fromCountry = fromCountry;
     }
+
+    public static void header(){
+        System.out.printf("%-5s %-15s %-10s %-15s %15s\n","ID","Name","code","description","fromCountry");
+    }
+
+    public void display() {
+        System.out.printf("%-5s %-15s %-10s %-15s %15s\n",id,name,code,description,fromCountry);
+    }
 }
